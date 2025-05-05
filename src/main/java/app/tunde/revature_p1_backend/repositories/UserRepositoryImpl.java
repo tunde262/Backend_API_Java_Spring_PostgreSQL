@@ -20,8 +20,8 @@ import app.tunde.revature_p1_backend.exceptions.EAuthException;
 public class UserRepositoryImpl implements UserRepository {
     private static final String SQL_CREATE = "INSERT INTO USERS(USERNAME, EMAIL, PASSWORD) VALUES(?, ?, ?)";
     private static final String SQL_COUNT_BY_EMAIL = "SELECT COUNT(*) FROM USERS WHERE EMAIL = ?";
-    private static final String SQL_FIND_BY_ID = "SELECT USER_ID, USERNAME, EMAIL, PASSWORD " + "FROM USERS WHERE USER_ID = ?";
-    private static final String SQL_FIND_BY_EMAIL = "SELECT USER_ID, USERNAME, EMAIL, PASSWORD " + "FROM USERS WHERE EMAIL = ?";
+    private static final String SQL_FIND_BY_ID = "SELECT * FROM USERS WHERE USER_ID = ?";
+    private static final String SQL_FIND_BY_EMAIL = "SELECT * FROM USERS WHERE EMAIL = ?";
 
     @Autowired
     JdbcTemplate jdbcTemplate;
@@ -76,6 +76,7 @@ public class UserRepositoryImpl implements UserRepository {
         return new User(rs.getInt("USER_ID"),
             rs.getString("USERNAME"),
             rs.getString("EMAIL"),
-            rs.getString("PASSWORD"));
+            rs.getString("PASSWORD"),
+            rs.getString("ROLE"));
     });
 }
