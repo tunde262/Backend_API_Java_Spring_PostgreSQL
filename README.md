@@ -1,6 +1,6 @@
 # Revature P1 Backend
 
-This is a Java Spring Boot backend application that supports a product-based system with JWT-protected authentication. It is connected to a PostgreSQL database (via Docker), supports user registration and login using bcrypt password hashing, and protects all product-related routes with JSON Web Tokens.
+This is a Java Spring Boot backend application that supports a product-based system with JWT-protected authentication (i.e. Inventory Management System Backend API). It is connected to a PostgreSQL database (via Docker), supports user registration and login using bcrypt password hashing, and protects all product-related routes with JSON Web Tokens.
 
 ![thumbnail](https://github.com/tunde262/Revature_P1_Backend/blob/main/assets/thumbnail.png?raw=true)
 
